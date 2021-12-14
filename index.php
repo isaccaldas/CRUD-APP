@@ -11,7 +11,41 @@
 </head>
 
 <body>
+	<div class="container">
+		<div><center><h1 style="margin-top: 70px; font-size: 34px; font-weight: bold;">Lista de Afazeres</h1></center>
+				<div class="col-md-10 col-md-offset-1" style="margin-top: 20px">
+					
+					<table class="table table-striped" style="font-size: 24px">
+						
+						<button type="button" class="btn btn-success" style="font-size: 24px; ">Adicionar Tarefa</button>
+						<button type="button" class="btn btn-default pull-right" style="font-size: 24px; ">Print</button>
+						
+						<hr><br>  
 
+						  <thead >
+						    <tr>
+						      <th scope="col">N.º</th>
+						      <th scope="col">Tarefa</th>
+						      
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <th scope="row">1</th>
+						      <td>Mark</td>
+						      <td>Otto</td>
+				
+						    </tr>
+						   
+						  </tbody>
+						</table>
+				</div>
+
+
+
+		</div>
+		
+	</div>
 </body>
 
 </html>
