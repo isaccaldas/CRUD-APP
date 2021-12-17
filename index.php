@@ -70,7 +70,7 @@ $rows = $db->query($sql);
 
 								<th scope="row"><?php echo $row['id']?></th>
 								<td class="col-md-10"><?php echo $row['nome']?></td>
-								<td><a href="" class="btn btn-success" style="font-size: 20px">Editar</a></td>
+								<td><a href="update.php?id=<?php echo $row['id']?>" class="btn btn-success" style="font-size: 20px">Editar</a></td>
 								<td><a href="delete.php?id=<?php echo $row['id']?>" class="btn btn-danger" style="font-size: 20px">Excluir</a></td>
 
 							</tr>
