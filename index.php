@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+
+<?php include 'db.php'; 
+
+$sql = "select * from tasks.tb01_tarefa";
+
+$rows = $db->query($sql);
+
+?>
+
 <html>
 	<head>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -23,7 +32,7 @@
 									<h4 class="modal-title">Adicionar Tarefa</h4>
 								</div>
 								<div class="modal-body">
-									<form>
+									<form method="post" action="add.php">
 										<div class="form-group">
 											<label>Nome da Tarefa:</label>
 											<input type="text" required="true" name="tarefa" class="form-control"/>
@@ -47,18 +56,25 @@
 						<hr><br>
 						<thead >
 							<tr>
-								<th scope="col">N.º</th>
+								<th scope="col">Id</th>
 								<th scope="col">Tarefa</th>
 								
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<th scope="row">1</th>
-								<td class="col-md-10">Mark</td>
+								
+								<?php while($row = $rows->fetch_assoc()):?>
+								<?php // var_dump($row); ?> <!-- Faz um teste para vericar se traz os dados -->
+								<?php //endwhile ?>  
+
+								<th scope="row"><?php echo $row['id']?></th>
+								<td class="col-md-10"><?php echo $row['nome']?></td>
 								<td><a href="" class="btn btn-success" style="font-size: 20px">Editar</a></td>
 								<td><a href="" class="btn btn-danger" style="font-size: 20px">Excluir</a></td>
+
 							</tr>
+							<?php endwhile ?>
 							
 						</tbody>
 					</table>
